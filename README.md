@@ -36,7 +36,7 @@ const imagesDemo = [
         path: '/lceHsT6l.jpg'
     }
 ];
-import GaleryCarousel from 'react-native-snap-carousel';
+import GaleryCarousel from 'react-native-galery-carousel';
 
     render () {
       <View>

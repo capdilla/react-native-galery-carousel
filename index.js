@@ -61,7 +61,7 @@ export default class GaleryCarousel extends Component{
   }
 }
 
-OwnCarousel.defaultProps={
+GaleryCarousel.defaultProps={
   data:[],
   joinLast:'',
   joinFirst:'',

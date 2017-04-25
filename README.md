@@ -41,9 +41,10 @@ import GaleryCarousel from 'react-native-galery-carousel';
     render () {
       <View>
         <GaleryCarousel
-          dataImage={imagesDemo}
+          data={imagesDemo}
           joinFirst={'http://i.imgur.com'}
           defaultImageIndex={2}
+          onLongPress={(key,element)=>{console.log(key,element)}}
           mainImageComponents={
             <View style={{flex:1,backgroundColor:"transparent"}}>
               <Text style={{color:"#fff"}}>Hello</Text>
@@ -65,7 +66,8 @@ Prop | Description | Type | Default
 **defaultImageIndex** | index of the first image to show | Number | `1`
 **mainImageComponents** | if you wanna render a component in the Main image | Component | `<View/>`
 **mainHeight** | size of the galery carousel | Number | `280`
+**onLongPress** | each item of the carousel | function | `function`
 
 
 ## TODO
-- [ ] Implement 'onLongPress' in the scrollView images
+- [x] Implement 'onLongPress' in the scrollView images

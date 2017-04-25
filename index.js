@@ -23,7 +23,7 @@ export default class GaleryCarousel extends Component{
         key={key}
         style={{height: (this.props.mainHeight / 3.73)}}
         onPress={()=>{this.changeImageIndex(key)} }
-        onLongPress={()=>console.log("long press ")}
+        onLongPress={()=>this.props.onLongPress(key,elt)}
       >
         <Image style={{height: (this.props.mainHeight / 3.73), width: 130}} source={{uri:`${joinFirst}${elt[getImageFrom]}${joinLast}`}} />
       </TouchableOpacity>

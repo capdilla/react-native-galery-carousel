@@ -41,7 +41,7 @@ import GaleryCarousel from 'react-native-galery-carousel';
     render () {
       <View>
         <GaleryCarousel
-          data={imagesDemo}
+          dataImage={imagesDemo}
           joinFirst={'http://i.imgur.com'}
           defaultImageIndex={2}
           onLongPress={(key,element)=>{console.log(key,element)}}
@@ -59,7 +59,7 @@ import GaleryCarousel from 'react-native-galery-carousel';
 
 Prop | Description | Type | Default
 ------ | ------ | ------ | ------
-**data** | the array of the image to show in the carousel | array | `[]`
+**dataImage** | the array of the image to show in the carousel | array | `[]`
 **getImageFrom** | the key of the array where you wanna get the image | string | `"path"`
 **joinFirst** | if you wanna join a link before **example** https://my-host-name.com/ `path` | string | `""`
 **joinLast** | if you wanna join string after **example** `path`/key="1255665" | string | `""`

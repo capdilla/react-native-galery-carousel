@@ -32,13 +32,13 @@ export default class GaleryCarousel extends Component{
 
 
   render(){
-    const {dataImage:data,joinFirst,joinLast,getImageFrom,mainImageComponents} = this.props;
+    const {dataImage,joinFirst,joinLast,getImageFrom,mainImageComponents} = this.props;
     const {defaultImageIndex}= this.state;
-    if(data.length>0)
+    if(dataImage.length>0)
       return(
         <View>
           <View style={{height: this.props.mainHeight, padding: 0}}>
-            <Image source={{uri:`${joinFirst}${data[defaultImageIndex][getImageFrom]}${joinLast}`}}
+            <Image source={{uri:`${joinFirst}${dataImage[defaultImageIndex][getImageFrom]}${joinLast}`}}
              style={{width: this.width, height: this.props.mainHeight,flex:1}}
              resizeMode='cover'>
               {mainImageComponents}
@@ -52,17 +52,17 @@ export default class GaleryCarousel extends Component{
               scrollEventThrottle={200}
               horizontal={true}
               style={{height: (this.props.mainHeight / 3.73)}}>
-              {data.map((elt, key) => this.createImages(elt, key))}
+              {dataImage.map((elt, key) => this.createImages(elt, key))}
             </ScrollView>
           </View>
         </View>
       )
-    if(data.length==0)return (<View/>)
+    if(dataImage.length==0)return (<View/>)
   }
 }
 
 GaleryCarousel.defaultProps={
-  data:[],
+  dataImage:[],
   joinLast:'',
   joinFirst:'',
   defaultImageIndex:0,
